@@ -1,0 +1,14 @@
+<h1><%= @catalogue.nom %></h1>
+<ul>
+  <% @meubles.each do |meuble| %>
+    <li><strong><%= meuble.nom %></strong> poids: <%= meuble.poids%> kg  Code: <%= meuble.code %>  Description: <%= meuble.description%></li>
+
+    <%= link_to "Supprimez le produit", catalogue_meuble_path(meuble, @catalogue), method: :delete, class: "delete-link" %>
+    <%= link_to "Editez le produit", edit_catalogue_meuble_path(@catalogue, meuble) %>
+  <% end %>
+
+  <br>
+  <br>
+  <%= link_to "Ajoutez un produit", new_catalogue_meuble_path(@catalogue) %> <br>
+  <%= link_to "Back", catalogues_path %>
+</ul>

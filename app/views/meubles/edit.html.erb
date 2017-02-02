@@ -1,0 +1,8 @@
+<%= simple_form_for [@catalogue, @meuble] do |f|  %>
+  <%= f.input :nom %>
+  <%= f.input :description, as: :text %>
+  <%= f.input :poids %>
+  <%= f.input :code %>
+  <%= f.input :tarif%>
+  <%= f.submit 'Modifier' %>
+<% end %>

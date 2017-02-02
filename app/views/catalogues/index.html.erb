@@ -1,0 +1,8 @@
+<h1>Catalogues</h1>
+
+<ul>
+  <% @catalogues.each do |catalogue| %>
+    <li><%= catalogue.nom %></li>
+    <%= link_to "meubles", catalogue_meubles_path(catalogue) %>
+  <% end %>
+</ul>

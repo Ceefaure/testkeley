@@ -1,0 +1,9 @@
+<h2>Ajoutez un nouveau produit</h2>
+  <%= simple_form_for [@catalogue, @meuble] do |f| %>
+  <%= f.input :nom%>
+  <%= f.input :code %>
+  <%= f.input :description, as: :text %>
+  <%= f.input :tarif %>
+  <%= f.input :poids %>
+<%= f.submit "Ajouter au catalogue" %>
+<% end %>
